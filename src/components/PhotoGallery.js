@@ -11,16 +11,16 @@ export default function PhotoGallery(){
     return(
         <div className = "PhotoGallery">
             <div className = "card cat" >
-                <ClickablePhoto img={coolCat} title = "Cool Cat" description= "He is a cool cat that will steal your girl with his cuteness."/>
+                <ClickablePhoto img={coolCat} id="0" title = "Cool Cat" description= "He is a cool cat that will steal your girl with his cuteness."/>
             </div>
             <div className = "card cat">
-                <ClickablePhoto img = {fierceCat} title = "Fierce Cat" description= "Becareful, she might scratch you. Just look at those fierce eyes"/>
+                <ClickablePhoto img = {fierceCat} id = "1" title = "Fierce Cat" description= "Becareful, she might scratch you. Just look at those fierce eyes"/>
             </div>
             <div className = "card cat">
-                <ClickablePhoto img = {romanticCat} title = "Romantic Cat" description= "She get lots of kisses because she is cute and romantic."/>
+                <ClickablePhoto img = {romanticCat} id = "2" title = "Romantic Cat" description= "She get lots of kisses because she is cute and romantic."/>
             </div>
             <div className = "card cat">
-                <ClickablePhoto img = {relaxedCat} title = "Relaxed Cat" description= "Everyone wish they are as relaxed as this cat"/>
+                <ClickablePhoto img = {relaxedCat} id = "3" title = "Relaxed Cat" description= "Everyone wish they are as relaxed as this cat"/>
             </div>
             
         </div>

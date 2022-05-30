@@ -2,15 +2,43 @@ import React, { useState } from 'react'
 import { ModalHeader, ModalBody, Modal, ModalFooter, Button } from 'reactstrap';import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import { render } from '@testing-library/react';
-const ClickablePhoto = ({ img, title, description }) => {
+const ClickablePhoto = ({ img, title, description, id }) => {
     const [isOpen, setisOpen] = useState(false)
     const [username, setusername] = useState("")
     const [comment, setcomment] = useState("")
+    const [likes, setLike]=useState([
+        {
+            id:"0",
+            likes: 10,
+        }, 
+        {
+            id:"1",
+            likes: 20,
+        },
+        {
+            id:"2",
+            likes: 11,
+        }, 
+        {
+            id:"3",
+            likes: 3,
+        },
+
+    ])
     const [isLiked, setisLiked] = useState(null)
+    const [count, setCount] = useState(0);
     const onClickHandler = () => {
         setisOpen(!isOpen)
     }
+
+    const counter = () => {
+        let tempLikes = [...likes]
+
+        tempLikes.find((like) => like.id === id).likes += 1
+        setLike(tempLikes)
+    }
     
+
     return (
         <div><img src={img} onClick={onClickHandler} className="cats" />
             <Modal isOpen={isOpen} toggle={onClickHandler}>
@@ -32,7 +60,10 @@ const ClickablePhoto = ({ img, title, description }) => {
                     </form>
                 </ModalBody>
                 <ModalFooter>
-                    <FontAwesomeIcon icon={isLiked ? faCircleCheck:faThumbsUp} onClick={()=>{setisLiked(!isLiked)}} className="icon"/>
+                    <div className="counter--count">
+                        <h1>{likes.find((like) => like.id === id).likes}</h1>
+                    </div>
+                    <FontAwesomeIcon icon={faThumbsUp}  onClick = {counter} className="icon"/>
                     <Button className = "btn btn-warning" onClick={onClickHandler}>
                         Close
                     </Button>
