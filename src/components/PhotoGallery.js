@@ -4,8 +4,9 @@ import fierceCat from "../assets/fierce-cat.jpg"
 import romanticCat from "../assets/romantic-cat.jpg"
 import relaxedCat from "../assets/relaxed-cat.jpg"
 import ClickablePhoto from './ClickablePhoto';
-
+import Login from "./ControlledForm";
 export default function PhotoGallery(){
+
 
     return(
         <div className = "PhotoGallery">
@@ -21,6 +22,7 @@ export default function PhotoGallery(){
             <div className = "card cat">
                 <ClickablePhoto img = {relaxedCat} title = "Relaxed Cat" description= "Everyone wish they are as relaxed as this cat"/>
             </div>
+            
         </div>
     )
 }
