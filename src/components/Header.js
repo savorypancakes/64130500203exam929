@@ -2,6 +2,7 @@ import React from "react"
 import {NavLink} from "react-router-dom"
 import Logo from "../assets/logo.png"
 
+
 export default function Header(){
     return(
         <nav className= "NavBar">

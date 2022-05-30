@@ -1,12 +1,11 @@
 import logo from './logo.svg';
+import HomeComp from "./components/HomeComponent"
 import './App.css';
-import HomeMain from "./components/MainComponent"
-
 
 export default function HomeApp() {
   return (
     <div className="HomeApp">
-      <HomeMain />
+      <HomeComp />
     </div>
   );
 }

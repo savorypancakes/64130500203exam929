@@ -2,12 +2,10 @@ import React from "react";
 import Bear from "../assets/bear-piano.jpg";
 import Cat from "../assets/featured-cat.jpg";
 
-export default function Home(){
+
+export default function HomeComp(){
     return(
         <div className = "Home">
-            {/* <h2 className="title">Breaking News</h2>
-            <p className="content">A Bear was found breaking into the home of a famous pianist and flawlessly playing the piano.</p>
-            <img src = "/bear-piano.jpg"/> */}
             <div className="card">
                 <img src={Bear} alt="Avatar" className="cardPic"/>
                 <div className="container">
