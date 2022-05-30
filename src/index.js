@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Home from './components/Home';
+import AboutMe from './components/AboutMe';
+import PhotoGallery from './components/PhotoGallery';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from './components/Footer';
+import './App.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutMe" element={<AboutMe />} />
+        <Route path="/photoGallery" element={<PhotoGallery />} />
+      </Routes>
+      <Footer />
+    </Router>
   </React.StrictMode>
 );
 
